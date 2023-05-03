@@ -1,0 +1,58 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "totvs_language_debug",
+			"request": "launch",
+			"name": "Smart Client Debug",
+			"program": "program",
+			"programArguments": [
+				"${command:AskForProgramArguments}"
+			],
+			"smartclientBin": "../totvs/bin/smartclient/smartclient.exe",
+			"cwb": "${workspaceFolder}",
+			"isMultiSession": true,
+			"enableTableSync": true
+		},
+		{
+			"type": "totvs_language_debug",
+			"request": "launch",
+			"name": "Depuração do idioma TOTVS",
+			"program": "${command:AskForProgramName}",
+			"cwb": "${workspaceFolder}",
+			"smartclientBin": "../totvs/bin/smartclient/smartclient.exe",
+			"isMultiSession": true,
+			"enableTableSync": true
+		}
+	],
+	"lastPrograms": [
+		{
+			"label": "SIGAMDI"
+		},
+		{
+			"label": "SIGAADV"
+		},
+		{
+			"label": "U_VARIAVEL"
+		},
+		{
+			"args": [
+				"u_variavel"
+			],
+			"label": "SIGAMDI"
+		},
+		{
+			"args": [
+				"SIGAMDI"
+			],
+			"label": "SIGAMDI"
+		}
+	],
+	"lastProgramExecuted": "SIGAMDI",
+	"lastProgramArgs": [
+		"SIGAMDI"
+	],
+	"lastProgramArgumens": [
+		"SIGAMDI"
+	]
+}
