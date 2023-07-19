@@ -1,9 +1,11 @@
 #Include 'Protheus.ch'
 
+// RLExcel - Gera um relatório no arquivo EXCEL
+// https://tdn.totvs.com/display/public/framework/FWMsExcelEx
 User Function RLExcel()
 
     Processa({||MntQuery()},,"Processando..." ) 
-    MsAguarde({|| GeraExcel()},,"O Arqvuivo Excel Está sendo gerado...")
+    MsAguarde({|| GeraExcel()},,"O Arquivo Excel está sendo gerado...")
 
     DbSelectArea("TR1")
     DbCloseArea()
@@ -11,7 +13,7 @@ User Function RLExcel()
 
 Return Nil
 
-// Montando a Query
+// MntQuery - Montando a Query
 Static Function MntQuery()
 
     Local cQuery := ""
@@ -39,10 +41,10 @@ Static Function MntQuery()
 
 Return Nil
 
-// Função que Gera o Arquivo Excel
+// GeraExcel - Função que Gera o Arquivo Excel
 Static Function GeraExcel()
 
-    Local oExcel := FWMsExcel() :New()
+    Local oExcel := FWMsExcel() :New()          // 
     Local lOk := .F.
     Local cArq := ""
     Local cDirTmp := "C:\TOTVS12\"
