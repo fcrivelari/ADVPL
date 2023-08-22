@@ -5,11 +5,11 @@
 			"type": "totvs_language_debug",
 			"request": "launch",
 			"name": "Smart Client Debug",
-			"program": "program",
+			"program": "SIGAMDI",
 			"programArguments": [
 				"${command:AskForProgramArguments}"
 			],
-			"smartclientBin": "../totvs/bin/smartclient/smartclient.exe",
+			"smartclientBin": "C:\\TOTVS12\\Protheus\\Protheus\\bin\\smartclient\\smartclient.exe",
 			"cwb": "${workspaceFolder}",
 			"isMultiSession": true,
 			"enableTableSync": true
@@ -20,7 +20,7 @@
 			"name": "Depuração do idioma TOTVS",
 			"program": "${command:AskForProgramName}",
 			"cwb": "${workspaceFolder}",
-			"smartclientBin": "../totvs/bin/smartclient/smartclient.exe",
+			"smartclientBin": "C:\\TOTVS12\\Protheus\\Protheus\\bin\\smartclient\\smartclient.exe",
 			"isMultiSession": true,
 			"enableTableSync": true
 		}
@@ -46,6 +46,30 @@
 				"SIGAMDI"
 			],
 			"label": "SIGAMDI"
+		},
+		{
+			"args": [
+				"SIGACFG"
+			],
+			"label": "SIGAMDI"
+		},
+		{
+			"args": [
+				"U_fUpFile"
+			],
+			"label": "SIGAMDI"
+		},
+		{
+			"args": [
+				"U_Graf001"
+			],
+			"label": "SIGAMDI"
+		},
+		{
+			"args": [
+				"U_GRAF001"
+			],
+			"label": "SIGAMDI"
 		}
 	],
 	"lastProgramExecuted": "SIGAMDI",
@@ -53,6 +77,9 @@
 		"SIGAMDI"
 	],
 	"lastProgramArgumens": [
+		"SIGAMDI"
+	],
+	"lastProgramArguments": [
 		"SIGAMDI"
 	]
 }

@@ -58,7 +58,7 @@ Static Function GeraHTML()
     cHtml += "    	 --> "
     cHtml += '    <meta charset="utf-8"> '       
     cHtml += "    <title>Relatorio de produtos</title> " 
-    cHtml += "    <link rel='stylesheet' href='estilo.css' /> "
+    cHtml += "    <link rel='stylesheet' href='estilo-darck.css' /> "
     cHtml += "    </head> "
 
     cHtml += "    <body> " 
@@ -92,11 +92,11 @@ Static Function GeraHTML()
     While HT1->(!Eof())
 
         cHtml += "<tr><td>"+ HT1->(FILIAL) + "</td>"
-        cHtml += "<tr><td>"+ HT1->(CODIGO) + "</td>"
-        cHtml += "<tr><td>"+ HT1->(DESCRICAO) + "</td>"
-        cHtml += "<tr><td>"+ HT1->(TIPO) + "</td>"
-        cHtml += "<tr><td>"+ HT1->(GRUPO) + "</td>"
-        cHtml += "<tr><td>"+ HT1->(IPI) + "</td></tr>"
+        cHtml += "<td>"+ HT1->(CODIGO) + "</td>"
+        cHtml += "<td>"+ HT1->(DESCRICAO) + "</td>"
+        cHtml += "<td>"+ HT1->(TIPO) + "</td>"
+        cHtml += "<td>"+ HT1->(GRUPO) + "</td>"
+        cHtml += "<td>"+ HT1->(IPI) + "</td></tr>"
 
             FWrite(nH, cHtml)
                 cHtml := ""
@@ -108,4 +108,8 @@ Static Function GeraHTML()
 
     MsgInfo("Arqvuivo gerado com sucesso!!")
 
-Return
+    // Abrindo Arquivo
+
+    nRet := ShellExecute("open",cFile,"","C:teste_html\Index.html",1)
+
+Return nRet
